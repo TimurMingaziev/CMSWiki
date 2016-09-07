@@ -106,7 +106,7 @@ namespace CMSPublish
 
             ////// Comment //////
             Thread.Sleep(5000);
-            CommentDto comment = new CommentDto {ContentComment = "aweosome", OwnerComment = "you", PageId = 1};
+            CommentDto comment = new CommentDto {ContentComment = "aweosome", OwnerComment = "you", PageId = 10};
             MessageRabbitClass msg3 = new MessageRabbitClass
             {
                 MethodName = "CreateComment",
