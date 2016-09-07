@@ -9,9 +9,9 @@ namespace CMS.Inf.Repository
 {
     public class SectionRepository
     {
-        readonly UserContext _userContext;
-        readonly IConfigurationProvider _config;
-        readonly ILogger _logger;
+        private readonly UserContext _userContext;
+        private readonly IConfigurationProvider _config;
+        private readonly ILogger _logger;
         public SectionRepository(ILogger logger)
         {
             _logger = logger;

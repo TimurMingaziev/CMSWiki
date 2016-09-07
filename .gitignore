@@ -7,7 +7,7 @@
 *.userosscache
 *.sln.docstates
 *.csproj
-*.sln
+.sln
 AsseblyInfo.cs
 packages.config
 

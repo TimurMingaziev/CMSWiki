@@ -11,9 +11,9 @@ namespace CMS.Inf.Repository
 
     public class PageRepository
     {
-        readonly UserContext _userContext;
-        readonly IConfigurationProvider _config;
-        readonly ILogger _logger;
+        private readonly UserContext _userContext;
+        private readonly IConfigurationProvider _config;
+        private readonly ILogger _logger;
         public PageRepository(ILogger logger)
         {
             _logger = logger;

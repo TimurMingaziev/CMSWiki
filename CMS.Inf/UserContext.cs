@@ -22,10 +22,12 @@ namespace CMS.Inf
         {
 
         }
+
         public DbSet<SectionDto> Section { get; set; }
         public DbSet<PageDto> Page { get; set; }
         public DbSet<MarkDto> Mark { get; set; }
         public DbSet<CommentDto> Comment { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
