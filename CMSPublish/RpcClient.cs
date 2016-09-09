@@ -64,9 +64,32 @@ namespace CMSPublish
             Console.WriteLine("Started");
             var rpcClient = new RpcClient();
 
+            #region ChangePage
+            PageDto chpage = new PageDto
+            {
+                PageId =  1,
+                NamePage = "1",
+                ContentPage = "ContentChanged",
+                ChangerPage = "1",
+                OwnerPage = "1",
+                DateChangePage = DateTime.Now,
+                DateCreatePage = DateTime.Now,
+                SectionId = 1
+            };
+            MessageRabbitClass msg0 = new MessageRabbitClass
+            {
+                MethodName = "UpdatePage",
+                Data = chpage
+            };
+            var response0 = rpcClient.Call(msg0, "rec_con");
+            Console.WriteLine(" [.] Got '{0}'", response0);
+
+            #endregion
+
             #region page
 
             //// PAGE ////////
+            Thread.Sleep(5000);
             PageDto page = new PageDto
             {
                 NamePage = "1",

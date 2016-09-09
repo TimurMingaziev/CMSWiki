@@ -96,7 +96,15 @@ namespace CMS.App
 
         public void UpdatePage(PageDto objDto)
         {
-
+            try
+            {
+                _logger.Info("UseCase : {0}", "start create section");
+                _pageRepo.UpdatePage(objDto);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.Message + "???" + ex.Source);
+            }
         }
     }
 }
